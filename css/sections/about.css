@@ -161,20 +161,28 @@
     transform: translateY(-5px);
 }
 
+.about-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
 .resume-download {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1.25rem 2.5rem;
+    padding: 1rem 2rem;
     border: 2px solid var(--border-color);
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    /* Significant bottom spacing */
     font-weight: 600;
     transition: all var(--transition-normal);
+    text-decoration: none;
+    color: inherit;
 }
 
 .resume-download:hover {
     background-color: var(--accent-color);
     color: var(--bg-primary);
+    border-color: var(--accent-color);
 }
