@@ -82,11 +82,10 @@
         gap: 2rem;
     }
 
-    .about-image {
-        /* Removed position/top - inherits normal scroll behavior */
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
+    .image-frame {
+        position: relative;
+        top: 0;
+        z-index: 1;
     }
 
     /* Spacing & Layout */
@@ -270,13 +269,18 @@
         align-items: center;
     }
 
+    .image-frame {
+        position: relative;
+        top: 0;
+        z-index: 1;
+        padding-bottom: 0;
+        /* Override padding if needed */
+    }
+
     .about-image {
         order: 1;
-        /* Profile pic below heading */
         max-width: 250px;
-        /* Removed position/top - scrolls naturally */
         padding-bottom: 2rem;
-        /* Added bottom padding to profile picture box */
     }
 
     .about-text {
