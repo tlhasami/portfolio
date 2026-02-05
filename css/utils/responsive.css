@@ -269,18 +269,28 @@
         align-items: center;
     }
 
+    .about-image {
+        order: 1;
+        width: 100%;
+        max-width: 260px;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
     .image-frame {
         position: relative;
         top: 0;
         z-index: 1;
-        padding-bottom: 0;
-        /* Override padding if needed */
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--card-bg);
     }
 
-    .about-image {
-        order: 1;
-        max-width: 250px;
-        padding-bottom: 2rem;
+    .image-frame::after {
+        inset: 2px;
+        opacity: 0.5;
     }
 
     .about-text {
