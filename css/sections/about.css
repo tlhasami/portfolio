@@ -172,8 +172,10 @@
 .resume-download {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 1rem 2rem;
+    min-width: 240px;
     border: 2px solid var(--border-color);
     font-weight: 600;
     transition: all var(--transition-normal);
