@@ -4,30 +4,55 @@
 
 // Loading Screen
 export function initLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (!loadingScreen) return;
+
+    // Click to hide immediately
+    loadingScreen.addEventListener('click', () => {
+        loadingScreen.classList.add('hidden');
+    });
+
     window.addEventListener('load', () => {
-        const loadingScreen = document.getElementById('loading-screen');
-        if (loadingScreen) {
-            setTimeout(() => {
-                loadingScreen.classList.add('hidden');
-            }, 1000);
-        }
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+        }, 1500);
     });
 }
 
 // Scroll Reveal Animations
-export function initScrollReveal() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+let scrollObserver;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+export function initScrollReveal() {
+    if (!scrollObserver) {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Add visible class styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .visible {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
             }
-        });
-    }, observerOptions);
+        `;
+        document.head.appendChild(style);
+    }
+
+    refreshScrollReveal();
+}
+
+export function refreshScrollReveal() {
+    if (!scrollObserver) return;
 
     // Observe all sections and cards
     const elementsToAnimate = document.querySelectorAll(`
@@ -40,21 +65,13 @@ export function initScrollReveal() {
     `);
 
     elementsToAnimate.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-
-    // Add visible class styles
-    const style = document.createElement('style');
-    style.textContent = `
-        .visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+        if (!el.classList.contains('visible')) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            scrollObserver.observe(el);
         }
-    `;
-    document.head.appendChild(style);
+    });
 }
 
 // Typewriter Effect - Fixed for complete display
@@ -149,6 +166,10 @@ export function init3DTilt() {
     const cards = document.querySelectorAll('.project-card, .achievement-card');
 
     cards.forEach(card => {
+        // Prevent multiple listeners if called again
+        if (card.getAttribute('data-tilt-init')) return;
+        card.setAttribute('data-tilt-init', 'true');
+
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;

@@ -16,6 +16,7 @@ import {
 import { initCertificateFilters } from './filters.js';
 import { initKeyboardShortcuts, initEasterEgg, logPerformance } from './utils.js';
 import { initMobileMenu } from './mobile.js';
+import { initProjects } from './projects.js';
 
 /* ==========================================
    INITIALIZATION
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
    init3DTilt();
 
    // Interactive features
+   initProjects();
    initCertificateFilters();
    initKeyboardShortcuts();
 

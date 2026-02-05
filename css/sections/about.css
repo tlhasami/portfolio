@@ -18,9 +18,21 @@
 }
 
 .image-frame {
-    border: 3px solid var(--border-color);
-    padding: 1rem;
-    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(212, 175, 55, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.image-frame::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 1px solid var(--gold-primary);
+    z-index: -1;
+    opacity: 0.3;
 }
 
 .profile-pic {
@@ -113,12 +125,14 @@
 }
 
 .timeline-item h4 i {
-    color: var(--accent-color);
+    color: var(--gold-primary);
 }
 
 .timeline-date {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+    color: var(--gold-secondary);
+    font-weight: 500;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
 

@@ -7,9 +7,11 @@
     left: 0;
     width: 100%;
     background-color: var(--bg-primary);
-    border-bottom: 1px solid var(--border-color);
+    /* Solid theme background */
+    border-bottom: 2px solid var(--gold-primary);
+    /* Refined gold border */
     z-index: 1000;
-    transition: transform var(--transition-normal), background-color var(--transition-slow);
+    transition: transform var(--transition-normal), background-color var(--transition-slow), border-color var(--transition-normal);
 }
 
 #main-header.hidden {

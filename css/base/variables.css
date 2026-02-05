@@ -1,23 +1,17 @@
 /* ==========================================
-   VARIABLES
+   VARIABLES - LUXURY THEME EDITION
    ========================================== */
 :root {
-    /* Colors - Advanced Palette */
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #000000;
-    --text-primary: #ffffff;
-    --text-secondary: #b3b3b3;
-    --accent-color: #ffffff;
-    --border-color: #333333;
+    /* Luxury Palette - Branding */
+    --gold-primary: #BF953F;
+    --gold-secondary: #8A6E2F;
+    --gold-light: #CFB53B;
+    --gold-gradient: linear-gradient(135deg, #CFB53B, #BF953F, #8A6E2F);
+    --silver-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 
-    /* Semantic Colors */
-    --color-success: #4caf50;
-    --color-warning: #ff9800;
-    --color-error: #f44336;
-    --color-white: #ffffff;
+    /* Base Colors */
     --color-black: #000000;
-    --color-gray-dark: #222222;
-    --color-gray-light: #cccccc;
+    --color-white: #ffffff;
 
     /* Fonts */
     --font-serif: 'Cormorant Garamond', serif;
@@ -32,15 +26,43 @@
     --spacing-xl: 8rem;
 
     /* Transitions */
-    --transition-fast: 0.2s ease;
+    --transition-fast: 0.15s ease;
     --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --transition-slow: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-premium: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-bounce: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-    /* Shadows */
-    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
-    --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.5);
-    --glow: 0 0 20px rgba(255, 255, 255, 0.15);
+/* Light Mode Variables */
+body:not(.dark-theme) {
+    --bg-primary: #ffffff;
+    --bg-secondary: #fdfdfd;
+    --text-primary: #121212;
+    --text-secondary: #5a5a5a;
+    --accent-color: #000000;
+    --border-color: #e0e0e0;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.15);
+    --glow: 0 0 15px rgba(0, 0, 0, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* Dark Mode Variables */
+body.dark-theme {
+    --bg-primary: #050505;
+    --bg-secondary: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent-color: var(--gold-primary);
+    --border-color: #1a1a1a;
+    --card-bg: #0a0a0a;
+    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.7);
+    --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.9);
+    --glow: 0 0 20px rgba(212, 175, 55, 0.15);
+    --glass-bg: rgba(5, 5, 5, 0.85);
 }
