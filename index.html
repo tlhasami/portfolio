@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Talha Sami - Software Developer, Competitive Programmer, and Innovator specializing in C++, Flutter, and problem-solving.">
+    <meta name="keywords"
+        content="Talha Sami, Software Developer, C++, Flutter, SFML, Competitive Programming, Portfolio">
+    <meta name="author" content="Talha Sami">
+    <title>Talha Sami | Software Developer & Competitive Programmer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="monogram">TS</div>
+        </div>
+    </div>
+
+    <!-- Fixed Header -->
+    <header id="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <span class="monogram-small">TS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#achievements" class="nav-link"><i class="fas fa-trophy"></i> Achievements</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="#certificates" class="nav-link"><i class="fas fa-certificate"></i> Certificates</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-adjust"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <svg class="geometric-accent" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="100" x2="800" y2="100" stroke="currentColor" stroke-width="1" opacity="0.1" />
+                <line x1="0" y1="300" x2="800" y2="300" stroke="currentColor" stroke-width="1" opacity="0.1" />
+                <line x1="0" y1="500" x2="800" y2="500" stroke="currentColor" stroke-width="1" opacity="0.1" />
+                <line x1="200" y1="0" x2="200" y2="600" stroke="currentColor" stroke-width="1" opacity="0.1" />
+                <line x1="600" y1="0" x2="600" y2="600" stroke="currentColor" stroke-width="1" opacity="0.1" />
+            </svg>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-name fade-in">TALHA SAMI</h1>
+            <p class="hero-tagline typewriter">Software Developer | Competitive Programmer | Innovator</p>
+            <div class="hero-description fade-in-delay">
+                <p>Hi, I'm Talha Sami — a dedicated and passionate Software Developer specializing in C++, Flutter, and
+                    real-world problem solving. I build efficient solutions, scalable apps, and creative experiences
+                    with a sharp eye for detail.</p>
+            </div>
+            <a href="#about" class="cta-button"><i class="fas fa-arrow-down"></i> Explore My Work</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="placeholder-avatar">TS</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="intro-text">I am <strong>Talha Sami</strong>, a driven software engineering student
+                        currently studying at <strong>FAST Islamabad</strong>, where I have consistently stood out in my
+                        batch thanks to strong programming skills and project excellence.</p>
+
+                    <p>My journey began with a strong curiosity for how things work — this evolved into a passion for
+                        software, innovation, and problem-solving.</p>
+
+                    <div class="specializations">
+                        <h3>I specialize in:</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <strong>C++</strong> — high performance, complex logic
+                            </li>
+                            <li>
+                                <strong>Flutter</strong> — cross-platform UI/UX applications
+                            </li>
+                            <li>
+                                <strong>SFML</strong> — interactive graphics and game-oriented projects
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p>I complement my technical expertise with a strong foundation in data structures, algorithms, and
+                        competitive programming — regularly participating in contests, solving challenging problems, and
+                        pushing performance boundaries.</p>
+
+                    <div class="values">
+                        <h3>Core Values</h3>
+                        <div class="values-grid">
+                            <div class="value-item">Growth</div>
+                            <div class="value-item">Precision</div>
+                            <div class="value-item">Creativity</div>
+                        </div>
+                    </div>
+
+                    <a href="assets/resume.pdf" class="resume-download" download>
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Achievements & Competitive Programming</h2>
+
+            <div class="achievements-intro">
+                <p>Top performer in university and external contests, specialized in solving advanced algorithmic
+                    problems with strong time/space efficiency.</p>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Contest Rankings</h3>
+                    <p>Multiple top rankings in monthly and weekly programming challenges</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Problem Solving</h3>
+                    <p>Solved high-difficulty tier problems focusing on optimized logic and efficiency</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Algorithm Mastery</h3>
+                    <p>Expertise in Dynamic Programming, Graphs, Greedy Algorithms, and Tree Structures</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Performance Focus</h3>
+                    <p>Consistently optimizing for time and space complexity in competitive environments</p>
+                </div>
+            </div>
+
+            <div class="leetcode-profile">
+                <h3><i class="fas fa-code"></i> LeetCode Profile</h3>
+                <p>Check out my problem-solving journey and statistics</p>
+                <a href="https://leetcode.com/talhasami/" target="_blank" rel="noopener noreferrer"
+                    class="profile-link">
+                    <i class="fas fa-external-link-alt"></i> Visit LeetCode Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects Showcase</h2>
+
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-laptop-code tech-icon"></i>
+                    C++ SFML Projects
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>SFML Graphics Engine</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">SFML</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Built using SFML for 2D graphics engagement. Implemented core
+                            game physics & user interaction with focus on performance & modular C++.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Interactive Animation System</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">SFML</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Evolved graphics systems with custom animations. Utilizes
+                            object-oriented design patterns for scalable and maintainable code.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-mobile-alt tech-icon"></i>
+                    Flutter Projects
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Cross-Platform Mobile App</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Cross-platform UI with intuitive navigation. Real-time data
+                            interaction with backend services and responsive design.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View Demo →
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                GitHub →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>UI Component Library</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Designed complex UI widgets with integrated responsive layouts &
+                            animations for seamless user experience.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View Demo →
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <h2 class="section-title">Certificates & Participation</h2>
+
+            <div class="certificate-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="competitive">Competitive Programming</button>
+                <button class="filter-btn" data-filter="workshops">Workshops & Courses</button>
+                <button class="filter-btn" data-filter="competitions">Other Competitions</button>
+            </div>
+
+            <div class="certificates-grid">
+                <!-- Competitive Programming Certificates -->
+                <div class="certificate-card" data-category="competitive">
+                    <div class="certificate-image">
+                        <div class="certificate-placeholder">
+                            <i class="fas fa-trophy"></i>
+                            <p>Certificate</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Algorithm Challenge Winner</h4>
+                        <p class="certificate-org">Competitive Programming Platform</p>
+                        <p class="certificate-date">2024</p>
+                        <span class="certificate-role">Top Rank</span>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-category="competitive">
+                    <div class="certificate-image">
+                        <div class="certificate-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>Certificate</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Graph & DP Specialization</h4>
+                        <p class="certificate-org">Advanced Algorithms Course</p>
+                        <p class="certificate-date">2024</p>
+                        <span class="certificate-role">Participant</span>
+                    </div>
+                </div>
+
+                <!-- Workshops & Courses -->
+                <div class="certificate-card" data-category="workshops">
+                    <div class="certificate-image">
+                        <div class="certificate-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Certificate</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Advanced C++ Workshop</h4>
+                        <p class="certificate-org">Tech Institute</p>
+                        <p class="certificate-date">2024</p>
+                        <span class="certificate-role">Participant</span>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-category="workshops">
+                    <div class="certificate-image">
+                        <div class="certificate-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Certificate</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Flutter Development Bootcamp</h4>
+                        <p class="certificate-org">Mobile Dev Academy</p>
+                        <p class="certificate-date">2023</p>
+                        <span class="certificate-role">Participant</span>
+                    </div>
+                </div>
+
+                <!-- Other Competitions -->
+                <div class="certificate-card" data-category="competitions">
+                    <div class="certificate-image">
+                        <div class="certificate-placeholder">
+                            <i class="fas fa-rocket"></i>
+                            <p>Certificate</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Hackathon Finalist</h4>
+                        <p class="certificate-org">Inter-College Event</p>
+                        <p class="certificate-date">2024</p>
+                        <span class="certificate-role">Finalist</span>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-category="competitions">
+                    <div class="certificate-image">
+                        <div class="certificate-placeholder">
+                            <i class="fas fa-bolt"></i>
+                            <p>Certificate</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Problem Solving Challenge</h4>
+                        <p class="certificate-org">University Competition</p>
+                        <p class="certificate-date">2023</p>
+                        <span class="certificate-role">Winner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Build Something Great Together</h2>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Islamabad, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/talhasami" target="_blank" rel="noopener noreferrer"
+                        class="social-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/talhasami" target="_blank" rel="noopener noreferrer"
+                        class="social-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://leetcode.com/talhasami" target="_blank" rel="noopener noreferrer"
+                        class="social-link">
+                        <i class="fas fa-code"></i> LeetCode
+                    </a>
+                </div>
+            </div>
+
+            <div class="signature">
+                <p>— Talha Sami</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
