@@ -64,11 +64,14 @@ export function refreshScrollReveal() {
         .values-grid
     `);
 
-    elementsToAnimate.forEach(el => {
+    elementsToAnimate.forEach((el, index) => {
         if (!el.classList.contains('visible')) {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            // Add stagger effect for cards in grids
+            const staggerDelay = (index % 3) * 0.1; // Stagger by 0.1s for every 3 items
+            el.style.transition = `opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${staggerDelay}s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${staggerDelay}s`;
+            el.style.willChange = 'opacity, transform';
             scrollObserver.observe(el);
         }
     });
@@ -161,14 +164,20 @@ export function initCursorTrail() {
     animateTrail();
 }
 
-// 3D Tilt Effect on Project Cards
+// 3D Tilt Effect on Project Cards (Desktop Only)
 export function init3DTilt() {
-    const cards = document.querySelectorAll('.project-card, .achievement-card');
+    // Disable on mobile for better performance
+    if (window.innerWidth < 768) return;
+
+    const cards = document.querySelectorAll('.project-card, .achievement-card, .certificate-card');
 
     cards.forEach(card => {
         // Prevent multiple listeners if called again
         if (card.getAttribute('data-tilt-init')) return;
         card.setAttribute('data-tilt-init', 'true');
+
+        // Add will-change for performance
+        card.style.willChange = 'transform';
 
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
@@ -178,8 +187,8 @@ export function init3DTilt() {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
+            const rotateX = (y - centerY) / 15; // Reduced intensity for smoother feel
+            const rotateY = (centerX - x) / 15;
 
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
         });

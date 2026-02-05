@@ -19,7 +19,7 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    margin-top: 10rem;
+    margin-top: 1rem;
     margin-bottom: 4rem;
     position: relative;
     padding-top: 2rem;
@@ -31,7 +31,12 @@ h2.section-title {
 }
 
 #about h2.section-title {
-    margin-top: 4rem;
+    margin-top: -1rem;
+    /* Less space for the first section below hero */
+}
+
+h2.section-title {
+    margin-top: -1rem;
     /* Less space for the first section below hero */
 }
 

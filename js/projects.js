@@ -24,6 +24,7 @@ export async function initProjects() {
 function renderProjects(projects, container) {
     container.innerHTML = ''; // Clear existing content
 
+    // Show ALL projects (removed the slice limit)
     projects.forEach((project, index) => {
         const card = createProjectCard(project);
         // Ensure card is hidden initially for animation
