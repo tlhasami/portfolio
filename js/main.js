@@ -18,6 +18,7 @@ import { initKeyboardShortcuts, initEasterEgg, logPerformance } from './utils.js
 import { initMobileMenu } from './mobile.js';
 import { initProjects } from './projects.js';
 import { initCompetitions } from './competitions.js';
+import { initParticles } from './particles.js';
 
 /* ==========================================
    INITIALIZATION
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
    initCompetitions();
    initCertificateFilters();
    initKeyboardShortcuts();
+   initParticles();
 
    // Utilities
    initEasterEgg();
