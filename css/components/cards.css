@@ -92,37 +92,69 @@
 }
 
 /* Unified Luxury Feature Card (The Signature Style) */
+/* Unified Luxury Feature Card (The Signature Style) */
 .luxury-feature-card,
 .project-card,
 .achievement-card,
 .certificate-card {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid transparent;
+    /* Transparent for border-image support, though using pseudo-border for radius support */
+    position: relative;
     padding: 3rem 2rem 4rem;
-    /* Added bottom padding */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    /* Refined ease-out animation */
-    position: relative;
     overflow: hidden;
     transform-style: preserve-3d;
     height: 100%;
     box-sizing: border-box;
     max-width: 100%;
+    border-radius: 4px;
+    /* Slight radius */
+    box-shadow: var(--shadow-sm);
+}
+
+/* Pseudo-border for gradient effect */
+.luxury-feature-card::after,
+.project-card::after,
+.achievement-card::after,
+.certificate-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    /* Border thickness */
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
 }
 
 .luxury-feature-card:hover,
 .project-card:hover,
 .achievement-card:hover,
 .certificate-card:hover {
-    transform: translateY(-20px) rotateX(4deg) scale(1.03);
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.2);
-    border-color: var(--gold-primary);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(212, 175, 55, 0.15);
 }
 
+/* Enhanced Gradient Border on Hover */
+.luxury-feature-card:hover::after,
+.project-card:hover::after,
+.achievement-card:hover::after,
+.certificate-card:hover::after {
+    background: var(--gold-gradient);
+    opacity: 1;
+}
+
+/* Shine Effect */
 .luxury-feature-card::before,
 .project-card::before,
 .achievement-card::before,
@@ -131,19 +163,31 @@
     position: absolute;
     top: 0;
     left: -150%;
-    width: 60%;
+    width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-    transform: skewX(-30deg);
-    transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(-25deg);
+    transition: none;
+    /* Reset for animation */
     z-index: 5;
+    pointer-events: none;
 }
 
 .luxury-feature-card:hover::before,
 .project-card:hover::before,
 .achievement-card:hover::before,
 .certificate-card:hover::before {
-    left: 150%;
+    animation: shineEffect 1.5s ease;
+}
+
+@keyframes shineEffect {
+    0% {
+        left: -150%;
+    }
+
+    100% {
+        left: 150%;
+    }
 }
 
 /* Card Icons */
@@ -275,13 +319,49 @@
     padding: 2rem;
     overflow: hidden;
     position: relative;
+    /* Placeholder Icon Logic */
+}
+
+.certificate-image::before {
+    content: '\f0a3';
+    /* fa-certificate default */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: var(--gold-primary);
+    opacity: 0.15;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Competition specific placeholder */
+.competition-card .certificate-image::before {
+    content: '\f091';
+    /* fa-trophy */
+}
+
+/* Hide placeholder when image is loaded */
+.certificate-image.loaded::before {
+    opacity: 0;
 }
 
 .certificate-image img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    transition: transform 0.8s var(--transition-premium);
+    transition: transform 0.8s var(--transition-premium), opacity 0.5s ease;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    /* Hidden until loaded */
+}
+
+.certificate-image.loaded img {
+    opacity: 1;
 }
 
 .certificate-card:hover .certificate-image img {

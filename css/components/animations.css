@@ -75,9 +75,21 @@
 /* Typewriter */
 .typewriter {
     display: inline-block;
-    white-space: nowrap;
     overflow: visible;
     border-right: 2px solid var(--text-primary);
+    white-space: nowrap;
+    animation: blink 0.75s step-end infinite;
+    max-width: 100%;
+}
+
+/* Responsive adjustment for typewriter */
+@media (max-width: 768px) {
+    .typewriter {
+        white-space: normal;
+        border-right: none;
+        animation: none;
+        text-align: center;
+    }
 }
 
 @keyframes blink {

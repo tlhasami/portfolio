@@ -2,7 +2,8 @@
    PROFESSIONAL CONTACT FOOTER
    ========================================== */
 .contact-footer {
-    padding: 6rem 2rem 3rem;
+    padding: 4rem 0 3rem;
+    /* Removed horizontal padding to rely on container */
     position: relative;
     background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     overflow: hidden;
@@ -50,10 +51,11 @@ body:not(.dark-theme) .footer-title {
     -webkit-text-fill-color: transparent;
 }
 
-/* Three Column Professional Layout */
+/* Two Column Symmetric Layout */
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
+    /* Balanced layout */
     gap: 4rem;
     margin-bottom: 5rem;
     align-items: start;

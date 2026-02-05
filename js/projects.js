@@ -5,7 +5,7 @@ export async function initProjects() {
     if (!projectsGrid) return;
 
     try {
-        const response = await fetch('./projects-data.json');
+        const response = await fetch('json/projects-data.json');
         const projects = await response.json();
 
         renderProjects(projects, projectsGrid);

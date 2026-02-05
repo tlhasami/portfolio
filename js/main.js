@@ -17,6 +17,7 @@ import { initCertificateFilters } from './filters.js';
 import { initKeyboardShortcuts, initEasterEgg, logPerformance } from './utils.js';
 import { initMobileMenu } from './mobile.js';
 import { initProjects } from './projects.js';
+import { initCompetitions } from './competitions.js';
 
 /* ==========================================
    INITIALIZATION
@@ -45,12 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
    // Interactive features
    initProjects();
+   initCompetitions();
    initCertificateFilters();
    initKeyboardShortcuts();
 
    // Utilities
    initEasterEgg();
    logPerformance();
+
+   // Global Image Loading Handler (for static images)
+   document.querySelectorAll('.certificate-image img').forEach(img => {
+      if (img.complete) {
+         img.parentElement.classList.add('loaded');
+      } else {
+         img.addEventListener('load', () => img.parentElement.classList.add('loaded'));
+      }
+   });
 });
 
 /* ==========================================
