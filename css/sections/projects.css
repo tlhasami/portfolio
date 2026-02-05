@@ -48,7 +48,7 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     /* 5 cards per row on desktop */
     gap: 2rem;
 }
