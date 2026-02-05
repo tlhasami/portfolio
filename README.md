@@ -8,11 +8,13 @@ This portfolio is designed to present technical expertise and project achievemen
 
 ## ✨ Key Features
 
-- **Clean Aesthetic**: A minimalist theme focused on readability and professional presentation.
+- **Premium Branding**: Custom Golden 'T' icon and full name brand title for a prestigious look.
+- **Custom Favicon**: Bespoke 'TS' monogram SVG favicon for professional browser tab presence.
+- **Elegant Light Theme**: Default-to-light mode for a clean, accessible first impression.
 - **Dynamic Projects**: Integration with project data for seamless updates.
 - **Responsive Architecture**: Fully optimized for mobile, tablet, and desktop viewing.
 - **Interactive UI**: Subtle animations and transitions to enhance user experience without distraction.
-- **Theme Persistence**: Support for consistent user preferences across sessions.
+- **Theme Support**: Consistent user preferences with both Light and Dark modes.
 
 ## 🛠️ Technology Stack
 

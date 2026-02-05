@@ -9,6 +9,8 @@ export function initTheme() {
     const savedTheme = localStorage.getItem(THEME_KEY);
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
     }
 
     const themeToggle = document.getElementById('theme-toggle');
