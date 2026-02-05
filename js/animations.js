@@ -1,0 +1,170 @@
+/* ==========================================
+   ANIMATIONS MODULE
+   ========================================== */
+
+// Loading Screen
+export function initLoadingScreen() {
+    window.addEventListener('load', () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 1000);
+        }
+    });
+}
+
+// Scroll Reveal Animations
+export function initScrollReveal() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections and cards
+    const elementsToAnimate = document.querySelectorAll(`
+        .achievement-card,
+        .project-card,
+        .certificate-card,
+        .tech-item,
+        .about-content,
+        .values-grid
+    `);
+
+    elementsToAnimate.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Add visible class styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Typewriter Effect - Fixed for complete display
+export function initTypewriter() {
+    const typewriterElement = document.querySelector('.typewriter');
+    if (!typewriterElement) return;
+
+    const text = typewriterElement.textContent;
+    typewriterElement.textContent = '';
+
+    // Use responsive styles instead of inline forcing
+    typewriterElement.style.display = 'inline-block';
+
+    // Check screen width to determine wrapping behavior
+    if (window.innerWidth < 768) {
+        typewriterElement.style.whiteSpace = 'normal'; // Allow wrap on mobile
+    } else {
+        typewriterElement.style.whiteSpace = 'nowrap';
+    }
+
+    typewriterElement.style.overflow = 'visible';
+
+    let charIndex = 0;
+    const typingSpeed = 60;
+
+    function type() {
+        if (charIndex < text.length) {
+            typewriterElement.textContent += text.charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingSpeed);
+        } else {
+            // Keep blinking cursor after typing completes
+            typewriterElement.style.borderRight = '2px solid var(--text-primary)';
+            setInterval(() => {
+                typewriterElement.style.borderRight =
+                    typewriterElement.style.borderRight === '2px solid transparent'
+                        ? '2px solid var(--text-primary)'
+                        : '2px solid transparent';
+            }, 750);
+        }
+    }
+
+    setTimeout(type, 500);
+}
+
+// Parallax Background Effect
+export function initParallax() {
+    const heroBackground = document.querySelector('.hero-background');
+    if (!heroBackground) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallaxSpeed = 0.5;
+        heroBackground.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+    });
+}
+
+// Cursor Trail Effect (Desktop only)
+export function initCursorTrail() {
+    if (window.innerWidth < 768) return; // Skip on mobile
+
+    const trail = document.createElement('div');
+    trail.className = 'cursor-trail';
+    document.body.appendChild(trail);
+
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateTrail() {
+        const dx = mouseX - trailX;
+        const dy = mouseY - trailY;
+
+        trailX += dx * 0.1;
+        trailY += dy * 0.1;
+
+        trail.style.left = trailX + 'px';
+        trail.style.top = trailY + 'px';
+
+        requestAnimationFrame(animateTrail);
+    }
+
+    animateTrail();
+}
+
+// 3D Tilt Effect on Project Cards
+export function init3DTilt() {
+    const cards = document.querySelectorAll('.project-card, .achievement-card');
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
+    });
+}

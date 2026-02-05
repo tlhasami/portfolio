@@ -11,11 +11,11 @@
     <meta name="author" content="Talha Sami">
     <title>Talha Sami | Software Developer & Competitive Programmer</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Premium Luxury Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
@@ -36,16 +36,29 @@
             <div class="logo">
                 <span class="monogram-small">TS</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#achievements" class="nav-link"><i class="fas fa-trophy"></i> Achievements</a></li>
-                <li><a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projects</a></li>
-                <li><a href="#certificates" class="nav-link"><i class="fas fa-certificate"></i> Certificates</a></li>
-                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-adjust"></i>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#tech-stack" class="nav-link"><i class="fas fa-code"></i> Tech Stack</a></li>
+                    <li><a href="#achievements" class="nav-link"><i class="fas fa-trophy"></i> Achievements</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fas fa-folder"></i> Projects</a></li>
+                    <li><a href="#certificates" class="nav-link"><i class="fas fa-certificate"></i> Certificates</a>
+                    </li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
             </button>
         </nav>
     </header>
@@ -63,11 +76,14 @@
         </div>
         <div class="hero-content">
             <h1 class="hero-name fade-in">TALHA SAMI</h1>
-            <p class="hero-tagline typewriter">Software Developer | Competitive Programmer | Innovator</p>
+            <p class="hero-tagline typewriter">Software Engineering Student | Flutter Developer | UI/UX Enthusiast</p>
             <div class="hero-description fade-in-delay">
-                <p>Hi, I'm Talha Sami — a dedicated and passionate Software Developer specializing in C++, Flutter, and
-                    real-world problem solving. I build efficient solutions, scalable apps, and creative experiences
-                    with a sharp eye for detail.</p>
+                <p>Passionate Flutter developer focused on clean architecture, smooth UI/UX, and solving real-world
+                    problems through code. Strong foundations in data structures, algorithms, and object-oriented
+                    programming.</p>
+                <p class="hero-stats"><strong>550+ LeetCode Problems Solved</strong> | <strong>30+ Projects</strong> |
+                    <strong>Lab Demonstrator at FAST-NUCES</strong>
+                </p>
             </div>
             <a href="#about" class="cta-button"><i class="fas fa-arrow-down"></i> Explore My Work</a>
         </div>
@@ -84,42 +100,56 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-frame">
-                        <div class="placeholder-avatar">TS</div>
+                        <img src="assets/images/profilePic.jpeg" alt="Talha Sami" class="profile-pic">
                     </div>
                 </div>
                 <div class="about-text">
-                    <p class="intro-text">I am <strong>Talha Sami</strong>, a driven software engineering student
-                        currently studying at <strong>FAST Islamabad</strong>, where I have consistently stood out in my
-                        batch thanks to strong programming skills and project excellence.</p>
+                    <p class="intro-text">I'm a <strong>second-year Software Engineering student at FAST
+                            Islamabad</strong> with a strong passion for coding and problem-solving. Dedicated to
+                        continuous learning, I actively explore new technologies, from algorithms to AI.</p>
 
-                    <p>My journey began with a strong curiosity for how things work — this evolved into a passion for
-                        software, innovation, and problem-solving.</p>
+                    <p>I aim to grow into a top-tier software engineer by building real-world projects, enhancing my
+                        skills, and staying committed to excellence.</p>
 
                     <div class="specializations">
-                        <h3>I specialize in:</h3>
+                        <h3>What I Do:</h3>
                         <ul class="skills-list">
-                            <li>
-                                <strong>C++</strong> — high performance, complex logic
-                            </li>
-                            <li>
-                                <strong>Flutter</strong> — cross-platform UI/UX applications
-                            </li>
-                            <li>
-                                <strong>SFML</strong> — interactive graphics and game-oriented projects
-                            </li>
+                            <li><strong>Flutter Development</strong> — Building cross-platform mobile apps with clean
+                                architecture and smooth UI/UX</li>
+                            <li><strong>Competitive Programming</strong> — 550+ LeetCode problems solved, strong DSA
+                                foundations</li>
+                            <li><strong>C++ Development</strong> — Game development with SFML, OOP projects, and system
+                                programming</li>
+                            <li><strong>Teaching</strong> — Lab Demonstrator for OOP and Programming Fundamentals at
+                                FAST-NUCES</li>
                         </ul>
                     </div>
 
-                    <p>I complement my technical expertise with a strong foundation in data structures, algorithms, and
-                        competitive programming — regularly participating in contests, solving challenging problems, and
-                        pushing performance boundaries.</p>
+                    <div class="education-experience">
+                        <h3>Education & Experience</h3>
+                        <div class="timeline-item">
+                            <h4><i class="fas fa-graduation-cap"></i> FAST-NUCES, Islamabad</h4>
+                            <p class="timeline-date">Software Engineering (2024 - 2028)</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4><i class="fas fa-chalkboard-teacher"></i> Lab Demonstrator - OOP</h4>
+                            <p class="timeline-date">FAST-NUCES | January 2026 - Present</p>
+                            <p>Assisting students with coding and debugging, clarifying core OOP concepts</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4><i class="fas fa-chalkboard-teacher"></i> Lab Demonstrator - Programming Fundamentals
+                            </h4>
+                            <p class="timeline-date">FAST-NUCES | August 2025 - January 2026</p>
+                            <p>Supporting students with programming concepts and lab sessions</p>
+                        </div>
+                    </div>
 
                     <div class="values">
                         <h3>Core Values</h3>
                         <div class="values-grid">
                             <div class="value-item">Growth</div>
                             <div class="value-item">Precision</div>
-                            <div class="value-item">Creativity</div>
+                            <div class="value-item">Excellence</div>
                         </div>
                     </div>
 
@@ -127,6 +157,148 @@
                         <i class="fas fa-download"></i>
                         <span>Download Resume</span>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="tech-stack-section">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+
+            <div class="tech-category">
+                <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="tech-icons">
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
+                            alt="C">
+                        <span>C</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++">
+                        <span>C++</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                            alt="Java">
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg"
+                            alt="Dart">
+                        <span>Dart</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                            alt="Python">
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3><i class="fas fa-layer-group"></i> Frameworks & Libraries</h3>
+                <div class="tech-icons">
+                    <div class="tech-item">
+                        <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter">
+                        <span>Flutter</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma">
+                        <span>Figma</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow">
+                        <span>TensorFlow</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch">
+                        <span>PyTorch</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+                            alt="Scikit-learn">
+                        <span>Scikit-learn</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg"
+                            alt="Pandas">
+                        <span>Pandas</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn">
+                        <span>Seaborn</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="OpenCV">
+                        <span>OpenCV</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/opengl/opengl-original.svg"
+                            alt="OpenGL">
+                        <span>OpenGL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3><i class="fas fa-database"></i> Databases</h3>
+                <div class="tech-icons">
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                            alt="MySQL">
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+                            alt="PostgreSQL">
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+                            alt="MongoDB">
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase">
+                        <span>Firebase</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                <div class="tech-icons">
+                    <div class="tech-item">
+                        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+                            alt="Linux">
+                        <span>Linux</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
+                            alt="Visual Studio">
+                        <span>Visual Studio</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                            alt="VS Code">
+                        <span>VS Code</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android Studio">
+                        <span>Android Studio</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg"
+                            alt="Jupyter">
+                        <span>Jupyter</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -289,98 +461,143 @@
             </div>
 
             <div class="certificates-grid">
-                <!-- Competitive Programming Certificates -->
-                <div class="certificate-card" data-category="competitive">
-                    <div class="certificate-image">
-                        <div class="certificate-placeholder">
-                            <i class="fas fa-trophy"></i>
-                            <p>Certificate</p>
+                <!-- Google/Coursera Certificates -->
+                <!-- Google/Coursera Certificates -->
+                <a href="https://www.coursera.org/account/accomplishments/verify/GOOGLE_AI_ESSENTIALS" target="_blank"
+                    class="certificate-card-link">
+                    <div class="certificate-card" data-category="workshops">
+                        <div class="certificate-image">
+                            <!-- Placeholder image if actual certificate image isn't available, or use the PDF preview if it works -->
+                            <img src="https://images.credly.com/size/340x340/images/6df1284d-27b6-4dfc-8829-459e9587428f/image.png"
+                                alt="Google AI Essentials">
+                        </div>
+                        <div class="certificate-info">
+                            <h4>Google AI Essentials</h4>
+                            <p class="certificate-org">Google via Coursera</p>
+                            <p class="certificate-date">2025</p>
+                            <span class="certificate-role">Verified <i class="fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div class="certificate-info">
-                        <h4>Algorithm Challenge Winner</h4>
-                        <p class="certificate-org">Competitive Programming Platform</p>
-                        <p class="certificate-date">2024</p>
-                        <span class="certificate-role">Top Rank</span>
-                    </div>
-                </div>
+                </a>
 
-                <div class="certificate-card" data-category="competitive">
-                    <div class="certificate-image">
-                        <div class="certificate-placeholder">
-                            <i class="fas fa-chart-bar"></i>
-                            <p>Certificate</p>
+                <a href="https://www.coursera.org/account/accomplishments/verify/GOOGLE_PROMPTING" target="_blank"
+                    class="certificate-card-link">
+                    <div class="certificate-card" data-category="workshops">
+                        <div class="certificate-image">
+                            <img src="https://images.credly.com/size/340x340/images/6df1284d-27b6-4dfc-8829-459e9587428f/image.png"
+                                alt="Google Prompting Essentials">
+                        </div>
+                        <div class="certificate-info">
+                            <h4>Google Prompting Essentials</h4>
+                            <p class="certificate-org">Google via Coursera</p>
+                            <p class="certificate-date">2025</p>
+                            <span class="certificate-role">Verified <i class="fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div class="certificate-info">
-                        <h4>Graph & DP Specialization</h4>
-                        <p class="certificate-org">Advanced Algorithms Course</p>
-                        <p class="certificate-date">2024</p>
-                        <span class="certificate-role">Participant</span>
-                    </div>
-                </div>
+                </a>
 
-                <!-- Workshops & Courses -->
-                <div class="certificate-card" data-category="workshops">
-                    <div class="certificate-image">
-                        <div class="certificate-placeholder">
-                            <i class="fas fa-laptop-code"></i>
-                            <p>Certificate</p>
+                <a href="https://www.coursera.org/account/accomplishments/verify/PYTHON_CRASH_COURSE" target="_blank"
+                    class="certificate-card-link">
+                    <div class="certificate-card" data-category="workshops">
+                        <div class="certificate-image">
+                            <img src="https://images.credly.com/size/340x340/images/2d84e428-9078-49b6-a804-13c56a00d1b6/image.png"
+                                alt="Crash Course on Python">
+                        </div>
+                        <div class="certificate-info">
+                            <h4>Crash Course on Python</h4>
+                            <p class="certificate-org">Google via Coursera</p>
+                            <p class="certificate-date">2025</p>
+                            <span class="certificate-role">Verified <i class="fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div class="certificate-info">
-                        <h4>Advanced C++ Workshop</h4>
-                        <p class="certificate-org">Tech Institute</p>
-                        <p class="certificate-date">2024</p>
-                        <span class="certificate-role">Participant</span>
-                    </div>
-                </div>
+                </a>
 
-                <div class="certificate-card" data-category="workshops">
-                    <div class="certificate-image">
-                        <div class="certificate-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                            <p>Certificate</p>
+                <a href="https://www.coursera.org/account/accomplishments/certificate/WHZ03GRBS7HB" target="_blank"
+                    class="certificate-card-link">
+                    <div class="certificate-card" data-category="workshops">
+                        <div class="certificate-image">
+                            <img src="assets/Certificates/GetStartedWithPython.png" alt="Get Started with Python">
+                        </div>
+                        <div class="certificate-info">
+                            <h4>Get Started with Python</h4>
+                            <p class="certificate-org">Google via Coursera</p>
+                            <p class="certificate-date">2025</p>
+                            <span class="certificate-role">Verified <i class="fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div class="certificate-info">
-                        <h4>Flutter Development Bootcamp</h4>
-                        <p class="certificate-org">Mobile Dev Academy</p>
-                        <p class="certificate-date">2023</p>
-                        <span class="certificate-role">Participant</span>
-                    </div>
-                </div>
+                </a>
 
-                <!-- Other Competitions -->
+                <!-- Competition Wins -->
                 <div class="certificate-card" data-category="competitions">
                     <div class="certificate-image">
-                        <div class="certificate-placeholder">
-                            <i class="fas fa-rocket"></i>
-                            <p>Certificate</p>
-                        </div>
+                        <img src="assets/CompetitionsWinner/FETX_Winner.jpg" alt="FETX Winner">
                     </div>
                     <div class="certificate-info">
-                        <h4>Hackathon Finalist</h4>
-                        <p class="certificate-org">Inter-College Event</p>
-                        <p class="certificate-date">2024</p>
-                        <span class="certificate-role">Finalist</span>
-                    </div>
-                </div>
-
-                <div class="certificate-card" data-category="competitions">
-                    <div class="certificate-image">
-                        <div class="certificate-placeholder">
-                            <i class="fas fa-bolt"></i>
-                            <p>Certificate</p>
-                        </div>
-                    </div>
-                    <div class="certificate-info">
-                        <h4>Problem Solving Challenge</h4>
-                        <p class="certificate-org">University Competition</p>
-                        <p class="certificate-date">2023</p>
+                        <h4>FETX Competition Winner</h4>
+                        <p class="certificate-org">FETX Event</p>
+                        <p class="certificate-date">2025</p>
                         <span class="certificate-role">Winner</span>
                     </div>
                 </div>
+
+                <div class="certificate-card" data-category="competitions">
+                    <div class="certificate-image">
+                        <img src="assets/CompetitionsWinner/Soventure-Bug-Buster_Winner.jpg"
+                            alt="Soventure Bug Buster Winner">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Soventure Bug Buster Challenge</h4>
+                        <p class="certificate-org">Soventure</p>
+                        <p class="certificate-date">2025</p>
+                        <span class="certificate-role">Winner</span>
+                    </div>
+                </div>
+
+                <!-- Competitive Programming - LeetCode Profile -->
+                <!-- Competitive Programming - LeetCode Profile -->
+                <a href="https://leetcode.com/tlhasami" target="_blank" class="certificate-card-link">
+                    <div class="certificate-card" data-category="competitive">
+                        <div class="certificate-image profile-card-image">
+                            <img src="assets/ProfilePages/leetcode.png" alt="LeetCode Profile">
+                        </div>
+                        <div class="certificate-info">
+                            <div class="profile-stats">
+                                <h4>LeetCode</h4>
+                                <div class="stat-row">
+                                    <span><i class="fas fa-check-circle"></i> 550+ Solved</span>
+                                    <span><i class="fas fa-trophy"></i> Top 5%</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span><i class="fas fa-star"></i> 100+ Badges</span>
+                                    <span><i class="fas fa-code"></i> Python/C++</span>
+                                </div>
+                            </div>
+                            <span class="certificate-role">View Profile <i class="fas fa-external-link-alt"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/tlhasami" target="_blank" class="certificate-card-link">
+                    <div class="certificate-card" data-category="competitive">
+                        <div class="certificate-image profile-card-image">
+                            <img src="assets/ProfilePages/github.png" alt="GitHub Profile">
+                        </div>
+                        <div class="certificate-info">
+                            <div class="profile-stats">
+                                <h4>GitHub</h4>
+                                <div class="stat-row">
+                                    <span><i class="fas fa-code-branch"></i> 30+ Repos</span>
+                                    <span><i class="fas fa-star"></i> 50+ Stars</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span><i class="fas fa-chart-line"></i> 500+ Commits</span>
+                                    <span><i class="fas fa-users"></i> Active</span>
+                                </div>
+                            </div>
+                            <span class="certificate-role">View Profile <i class="fas fa-external-link-alt"></i></span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -391,37 +608,88 @@
             <h2 class="section-title">Let's Build Something Great Together</h2>
 
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                <div class="contact-info-section">
+                    <h3>Get In Touch</h3>
+                    <p class="contact-intro">Have a question or want to work together? Feel free to reach out!</p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:talharajpoot2711@gmail.com">talharajpoot2711@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>03139549737</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Islamabad, Pakistan</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Islamabad, Pakistan</p>
-                        </div>
+                    <div class="social-links">
+                        <a href="https://github.com/tlhasami" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/tlhasami" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://leetcode.com/tlhasami" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="LeetCode">
+                            <i class="fas fa-code"></i> LeetCode
+                        </a>
                     </div>
                 </div>
 
-                <div class="social-links">
-                    <a href="https://github.com/talhasami" target="_blank" rel="noopener noreferrer"
-                        class="social-link">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/talhasami" target="_blank" rel="noopener noreferrer"
-                        class="social-link">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://leetcode.com/talhasami" target="_blank" rel="noopener noreferrer"
-                        class="social-link">
-                        <i class="fas fa-code"></i> LeetCode
-                    </a>
+                <div class="contact-form-section">
+                    <h3>Send Me a Message</h3>
+                    <form action="https://formsubmit.co/talharajpoot2711@gmail.com" method="POST" class="contact-form"
+                        id="contact-form">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name here">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email here">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                placeholder="Enter your subject here">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required
+                                placeholder="Your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
 
@@ -436,7 +704,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
