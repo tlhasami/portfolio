@@ -4,7 +4,7 @@ A professional, high-performance portfolio website built with clean architecture
 
 ## 🚀 Overview
 
-This portfolio is designed to present technical expertise and project achievements in a minimalist, accessible format. It serves as a central hub for my professional profile, including project repositories, certifications, and contact information.
+This portfolio is designed to present technical expertise and project achievements in a minimalist, accessible format. It serves as a central hub for my professional profile, including project repositories, certifications,  and contact information.
 
 ## ✨ Key Features
 
