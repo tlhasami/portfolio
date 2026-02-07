@@ -97,7 +97,7 @@ body:not(.dark-theme) .footer-title {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--glass-border);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 body:not(.dark-theme) .footer-link {
@@ -154,7 +154,7 @@ body:not(.dark-theme) .footer-link {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 2.5rem;
-    border-radius: 12px;
+    border-radius: 14px;
     border: 1px solid var(--glass-border);
     box-shadow: var(--shadow-md);
 }
@@ -220,7 +220,7 @@ body:not(.dark-theme) .input-field::placeholder {
     background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
     color: var(--color-white);
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
