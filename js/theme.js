@@ -7,10 +7,11 @@ const THEME_KEY = 'portfolio-theme';
 // Initialize Theme
 export function initTheme() {
     const savedTheme = localStorage.getItem(THEME_KEY);
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-    } else {
+    // Default to dark theme if no preference is saved
+    if (savedTheme === 'light') {
         document.body.classList.remove('dark-theme');
+    } else {
+        document.body.classList.add('dark-theme');
     }
 
     const themeToggle = document.getElementById('theme-toggle');
