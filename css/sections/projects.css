@@ -4,7 +4,7 @@
 
 /* Tech Stack Section */
 .tech-stack-section {
-    background-color: var(--bg-primary);
+    background: transparent;
 }
 
 .tech-category {
@@ -22,12 +22,12 @@
 }
 
 .tech-category h3 i {
-    color: var(--accent-color);
+    color: var(--gold-primary);
 }
 
 /* Projects Section */
 .projects-section {
-    background-color: var(--bg-secondary);
+    background: transparent;
 }
 
 .projects-category {

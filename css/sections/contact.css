@@ -3,11 +3,10 @@
    ========================================== */
 .contact-footer {
     padding: 4rem 0 3rem;
-    /* Removed horizontal padding to rely on container */
     position: relative;
-    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    background: linear-gradient(180deg, transparent 0%, var(--bg-secondary) 100%);
     overflow: hidden;
-    border-top: 1px solid rgba(191, 149, 63, 0.1);
+    border-top: 1px solid var(--glass-border);
 }
 
 /* Luxury Background Glow */
@@ -17,9 +16,11 @@
     top: -50%;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(191, 149, 63, 0.05) 0%, transparent 70%);
+    width: 800px;
+    height: 800px;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(232, 184, 109, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(167, 139, 250, 0.06) 0%, transparent 50%);
     pointer-events: none;
     z-index: 0;
 }
@@ -37,7 +38,7 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 4rem;
-    background: linear-gradient(135deg, #CFB53B, #BF953F, #8A6E2F);
+    background: var(--gold-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -45,7 +46,7 @@
 }
 
 body:not(.dark-theme) .footer-title {
-    background: linear-gradient(135deg, #BF953F, #8A6E2F);
+    background: linear-gradient(135deg, var(--gold-secondary) 0%, var(--gold-primary) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -73,7 +74,7 @@ body:not(.dark-theme) .footer-title {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #BF953F;
+    color: var(--gold-primary);
     margin-bottom: 1rem;
 }
 
@@ -88,30 +89,33 @@ body:not(.dark-theme) .footer-title {
     align-items: center;
     gap: 1rem;
     font-size: 1.1rem;
-    color: #e0e0e0;
+    color: var(--text-secondary);
     text-decoration: none;
     transition: all 0.3s ease;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
     border-radius: 8px;
 }
 
 body:not(.dark-theme) .footer-link {
-    color: #333333;
-    background: #f5f5f5;
-    border-color: #e0e0e0;
+    color: var(--text-primary);
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
 }
 
 .footer-link i {
-    color: #BF953F;
+    color: var(--gold-primary);
     font-size: 1.2rem;
 }
 
 .footer-link:hover {
-    border-color: #BF953F;
+    border-color: var(--gold-primary);
     transform: translateX(5px);
-    background: rgba(191, 149, 63, 0.05);
+    background: rgba(232, 184, 109, 0.1);
+    box-shadow: var(--shadow-sm);
 }
 
 .social-icons-row {
@@ -126,33 +130,39 @@ body:not(.dark-theme) .footer-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(191, 149, 63, 0.3);
+    border: 1px solid rgba(232, 184, 109, 0.3);
     border-radius: 50%;
-    color: #BF953F;
+    color: var(--gold-primary);
     text-decoration: none;
     transition: all 0.3s ease;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .social-btn:hover {
-    background: #BF953F;
-    color: #000;
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+    color: var(--color-white);
+    border-color: transparent;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(191, 149, 63, 0.2);
+    box-shadow: var(--shadow-md), 0 0 20px rgba(232, 184, 109, 0.3);
 }
 
 /* Right Column: Professional Form */
 .contact-form-container {
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 2.5rem;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
 }
 
 body:not(.dark-theme) .contact-form-container {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
 }
 
 .form-header {
@@ -201,16 +211,16 @@ body:not(.dark-theme) .input-field::placeholder {
 }
 
 .input-field:focus {
-    border-bottom-color: #BF953F;
+    border-bottom-color: var(--gold-primary);
 }
 
 .submit-button {
     width: 100%;
     padding: 1.25rem;
-    background: linear-gradient(135deg, #BF953F, #8A6E2F);
-    color: #000;
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+    color: var(--color-white);
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -221,12 +231,12 @@ body:not(.dark-theme) .input-field::placeholder {
 
 .submit-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(191, 149, 63, 0.2);
+    box-shadow: var(--shadow-md), var(--highlight-glow);
 }
 
 /* Footer Bottom */
 .footer-bottom-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--glass-border);
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
@@ -234,22 +244,22 @@ body:not(.dark-theme) .input-field::placeholder {
 }
 
 body:not(.dark-theme) .footer-bottom-bar {
-    border-top-color: rgba(0, 0, 0, 0.1);
+    border-top-color: var(--glass-border);
 }
 
 .copyright {
-    color: #888888;
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
 .signature {
     font-family: var(--font-mono);
     font-size: 0.9rem;
-    color: #888888;
+    color: var(--text-secondary);
 }
 
 .signature span {
-    color: #BF953F;
+    color: var(--gold-primary);
 }
 
 /* Responsive */

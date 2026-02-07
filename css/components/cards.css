@@ -37,8 +37,11 @@
 .tech-item:hover {
     transform: translateY(-10px) scale(1.05);
     border-color: var(--gold-primary);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 175, 55, 0.4);
+    box-shadow: var(--shadow-lg), var(--highlight-glow);
     z-index: 10;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .tech-item::after {
@@ -48,7 +51,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(transparent, var(--gold-primary), transparent 30%);
+    background: conic-gradient(transparent, var(--gold-primary), var(--accent-violet), transparent 30%);
     animation: rotateGlow 4s linear infinite;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -97,9 +100,10 @@
 .project-card,
 .achievement-card,
 .certificate-card {
-    background-color: var(--card-bg);
-    border: 1px solid transparent;
-    /* Transparent for border-image support, though using pseudo-border for radius support */
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
     position: relative;
     padding: 3rem 2rem 4rem;
     display: flex;
@@ -112,8 +116,7 @@
     height: 100%;
     box-sizing: border-box;
     max-width: 100%;
-    border-radius: 4px;
-    /* Slight radius */
+    border-radius: 12px;
     box-shadow: var(--shadow-sm);
 }
 
