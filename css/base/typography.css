@@ -40,7 +40,7 @@ h2.section-title {
     /* Less space for the first section below hero */
 }
 
-body.dark-theme h2.section-title {
+:root.dark-theme h2.section-title {
     background: var(--gold-gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -63,7 +63,7 @@ h2.section-title::after {
     border-radius: 2px;
 }
 
-body:not(.dark-theme) h2.section-title::after {
+:root:not(.dark-theme) h2.section-title::after {
     background: #000;
 }
 

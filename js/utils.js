@@ -25,8 +25,8 @@ export function initKeyboardShortcuts() {
                 document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
                 break;
             case 'p':
-                // Go to projects
-                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                // Go to projects page
+                window.location.href = 'projects.html';
                 break;
             case 'c':
                 // Go to contact

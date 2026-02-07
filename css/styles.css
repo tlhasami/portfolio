@@ -170,7 +170,7 @@ body::before {
 }
 
 /* Light mode adjustments */
-body:not(.dark-theme) .firefly {
+:root:not(.dark-theme) .firefly {
     background: var(--gold-secondary);
     box-shadow: 
         0 0 8px 2px rgba(201, 160, 85, 0.5),
@@ -178,7 +178,7 @@ body:not(.dark-theme) .firefly {
         0 0 24px 6px rgba(201, 160, 85, 0.15);
 }
 
-body:not(.dark-theme) .aurora-wave {
+:root:not(.dark-theme) .aurora-wave {
     opacity: 0.25;
 }
 

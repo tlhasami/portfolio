@@ -69,7 +69,7 @@
 }
 
 /* Light mode specific adjustment for the title if needed */
-body:not(.dark-theme) .logo-title {
+:root:not(.dark-theme) .logo-title {
     color: var(--color-black);
 }
 

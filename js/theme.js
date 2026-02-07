@@ -9,9 +9,9 @@ export function initTheme() {
     const savedTheme = localStorage.getItem(THEME_KEY);
     // Default to dark theme if no preference is saved
     if (savedTheme === 'light') {
-        document.body.classList.remove('dark-theme');
+        document.documentElement.classList.remove('dark-theme');
     } else {
-        document.body.classList.add('dark-theme');
+        document.documentElement.classList.add('dark-theme');
     }
 
     const themeToggle = document.getElementById('theme-toggle');
@@ -19,7 +19,7 @@ export function initTheme() {
         themeToggle.addEventListener('click', toggleTheme);
 
         // Set initial icon
-        const isDark = document.body.classList.contains('dark-theme');
+        const isDark = document.documentElement.classList.contains('dark-theme');
         const icon = themeToggle.querySelector('i');
         if (icon) {
             icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
@@ -39,8 +39,8 @@ export function initTheme() {
 
 // Toggle Theme
 function toggleTheme() {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
+    document.documentElement.classList.toggle('dark-theme');
+    const isDark = document.documentElement.classList.contains('dark-theme');
     localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
 
     // Update theme toggle icon
@@ -55,5 +55,5 @@ function toggleTheme() {
 
 // Get Current Theme
 export function getCurrentTheme() {
-    return document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+    return document.documentElement.classList.contains('dark-theme') ? 'dark' : 'light';
 }

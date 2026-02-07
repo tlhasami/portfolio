@@ -16,7 +16,6 @@ import {
 import { initCertificateFilters } from './filters.js';
 import { initKeyboardShortcuts, initEasterEgg, logPerformance } from './utils.js';
 import { initMobileMenu } from './mobile.js';
-import { initProjects } from './projects.js';
 import { initCompetitions } from './competitions.js';
 import { initCertificates } from './certificates.js';
 import { initParticles } from './particles.js';
@@ -47,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
    init3DTilt();
 
    // Interactive features
-   initProjects();
    initCompetitions();
    initCertificates();
    initCertificateFilters();
@@ -76,7 +74,7 @@ console.log(`
 %cT - Scroll to top
 H - Go to Home
 A - Go to About
-P - Go to Projects
+P - Go to Projects page
 C - Go to Contact
 D - Toggle dark/light theme
 `, 'color: #e0e0e0; font-weight: bold; font-size: 14px;', 'color: #a0a0a0; font-size: 12px;');

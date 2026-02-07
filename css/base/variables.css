@@ -53,7 +53,7 @@
 }
 
 /* Light Mode Variables */
-body:not(.dark-theme) {
+:root:not(.dark-theme) {
     --bg-primary: #FAFBFC;
     --bg-secondary: #F1F5F9;
     --text-primary: #0F172A;
@@ -72,7 +72,7 @@ body:not(.dark-theme) {
 }
 
 /* Dark Mode Variables */
-body.dark-theme {
+:root.dark-theme {
     --bg-primary: #06070A;
     --bg-secondary: #0D0F14;
     --text-primary: #F8FAFC;
