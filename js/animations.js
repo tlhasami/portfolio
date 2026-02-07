@@ -106,14 +106,8 @@ export function initTypewriter() {
             charIndex++;
             setTimeout(type, typingSpeed);
         } else {
-            // Keep blinking cursor after typing completes
-            typewriterElement.style.borderRight = '2px solid var(--text-primary)';
-            setInterval(() => {
-                typewriterElement.style.borderRight =
-                    typewriterElement.style.borderRight === '2px solid transparent'
-                        ? '2px solid var(--text-primary)'
-                        : '2px solid transparent';
-            }, 750);
+            // Remove cursor after typing completes
+            typewriterElement.style.borderRight = 'none';
         }
     }
 

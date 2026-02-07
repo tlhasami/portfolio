@@ -177,9 +177,9 @@
 }
 
 .about-actions {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    flex-wrap: wrap;
     margin-top: 2rem;
     margin-bottom: 4rem;
 }
@@ -189,8 +189,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 2rem;
-    min-width: 240px;
+    padding: 1rem;
     border: 2px solid var(--border-color);
     font-weight: 600;
     transition: all var(--transition-normal);

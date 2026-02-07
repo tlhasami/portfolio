@@ -76,9 +76,8 @@
 .typewriter {
     display: inline-block;
     overflow: visible;
-    border-right: 2px solid var(--text-primary);
+    border-right: none;
     white-space: nowrap;
-    animation: blink 0.75s step-end infinite;
     max-width: 100%;
 }
 
@@ -87,7 +86,6 @@
     .typewriter {
         white-space: normal;
         border-right: none;
-        animation: none;
         text-align: center;
     }
 }

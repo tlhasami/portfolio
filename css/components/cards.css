@@ -96,7 +96,6 @@
 }
 
 /* Unified Luxury Feature Card (The Signature Style) */
-/* Unified Luxury Feature Card (The Signature Style) */
 .luxury-feature-card,
 .project-card,
 .achievement-card,
@@ -106,7 +105,7 @@
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     position: relative;
-    padding: 3rem 2rem 4rem;
+    padding: 2rem 1.5rem 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,9 +196,9 @@
 
 /* Card Icons */
 .card-icon {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: var(--gold-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     transition: all 0.5s var(--transition-premium);
     transform: translateZ(40px);
 }
@@ -211,9 +210,9 @@
 /* Titles & Descriptions */
 .card-title {
     font-family: var(--font-serif);
-    font-size: 1.75rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: var(--text-primary);
     transform: translateZ(30px);
     word-wrap: break-word;
@@ -223,28 +222,29 @@
 
 .card-description {
     color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
     transform: translateZ(20px);
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
+    flex-grow: 1;
 }
 
 /* Project Specific Tags & Links */
 .card-tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
     justify-content: center;
     margin-top: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     transform: translateZ(25px);
 }
 
 .card-tech-tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-family: var(--font-mono);
     color: var(--gold-primary);
     background: rgba(212, 175, 55, 0.1);
@@ -255,20 +255,28 @@
 
 .card-action-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
     transform: translateZ(35px);
 }
 
 .card-link {
     color: var(--text-secondary);
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    text-decoration: none;
 }
 
 .card-link:hover {
     color: var(--gold-primary);
-    transform: translateY(-3px) scale(1.1);
+    border-color: var(--gold-primary);
+    transform: translateY(-2px);
 }
 
 /* Achievement Specifics (Keeping Numbers Larger) */

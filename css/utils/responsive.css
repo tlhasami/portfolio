@@ -2,6 +2,14 @@
    RESPONSIVE DESIGN UTILITIES
    ========================================== */
 
+/* Medium screens (1024px and below) */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
 /* Tablet and below (768px) */
 @media (max-width: 768px) {
 
@@ -134,14 +142,40 @@
         font-size: 2.5rem;
     }
 
-    /* Projects - 2 columns on tablet */
+    /* Projects - 1 column on tablet */
     .projects-grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 
     .project-card {
-        padding: 1.5rem;
+        padding: 1.5rem 1.25rem 2rem;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .card-tech-stack {
+        gap: 0.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-tech-tag {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.5rem;
     }
 
     .tech-tags {
@@ -325,6 +359,11 @@
         box-sizing: border-box;
     }
 
+    .about-actions {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
     /* Tech Stack Polish */
     .tech-stack-section {
         padding-top: 0.5rem !important;
@@ -407,6 +446,7 @@
     .achievements-grid,
     .projects-grid {
         grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
     }
 
     .certificates-grid {
