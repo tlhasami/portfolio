@@ -18,6 +18,7 @@ import { initKeyboardShortcuts, initEasterEgg, logPerformance } from './utils.js
 import { initMobileMenu } from './mobile.js';
 import { initProjects } from './projects.js';
 import { initCompetitions } from './competitions.js';
+import { initCertificates } from './certificates.js';
 import { initParticles } from './particles.js';
 
 /* ==========================================
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
    // Interactive features
    initProjects();
    initCompetitions();
+   initCertificates();
    initCertificateFilters();
    initKeyboardShortcuts();
    initParticles();
